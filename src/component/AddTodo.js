@@ -68,15 +68,16 @@ class AddTodo extends Component {
           renderInput={(params) => <TextField {...params} />}
           />
         </LocalizationProvider>
+        <div data-testid="new-item-button">
         <Button
           style={{ marginLeft: "10px" }}
           onClick={this.handleSubmit}
           variant="contained"
           color="primary"
-          data-testid="new-item-button"
         >
           Add
         </Button>
+        </div>
       </div>
     );
   }
