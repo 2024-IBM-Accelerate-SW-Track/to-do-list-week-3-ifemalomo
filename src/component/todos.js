@@ -20,9 +20,9 @@ const Todos = ({ todos, deleteTodo }) => {
             {/* Remember, we set the local state of this todo item when the user submits the form in 
             AddTodo.js. All we need to do is return the todo list item {todo.content} as well as its 
             current date/time {todo.date}. Also, the item's id is utilized in order to correctly delete an item from the Todo list*/}.
-            <ListItemButton component="a" href="#simple-list">
+            <ListItemButton component="a" href="#simple-list" data-testid="new-item-button">
               <Checkbox style={{paddingLeft:0}} color="primary" onClick={() => deleteTodo(todo.id)}/>
-              <ListItemText primary={todo.content} secondary={todo.duedate}/>
+              <ListItemText primary={todo.content} secondary={todo.duedate} data-testid="new-item-textfield"/>
             </ListItemButton>
           </Card>
         </Grid>
